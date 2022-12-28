@@ -14,12 +14,12 @@ import javax.persistence.Table;
 public class Role implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String Authority;
-	
+
 	public Role () {
 	}
 
@@ -28,7 +28,7 @@ public class Role implements Serializable {
 		this.id = id;
 		Authority = authority;
 	}
-		
+
 	public long getId() {
 		return id;
 	}
@@ -54,13 +54,11 @@ public class Role implements Serializable {
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
+		if ((obj == null) || (getClass() != obj.getClass()))
 			return false;
 		Role other = (Role) obj;
 		return id == other.id;
 	}
 
-	
+
 }
